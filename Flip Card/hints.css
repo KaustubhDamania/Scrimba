@@ -1,0 +1,20 @@
+/* 
+
+Hint 1:
+There is :hover pseudo-class that applies styles when the mouse is hovered over it. 
+
+Like this:
+.card:hover {
+     background: #fafafa
+}
+
+Hint 2:
+Found transform css property, but only the back of the card is shown? 
+This is because .back element is rendered after .front, so it gets covered,
+use "backface-visibility: hidden;" to hide the back of the card.
+
+Hint 3: 
+You got the card flipped, but the wording is mirrored? Try researching 
+"transform-style" property
+
+*/

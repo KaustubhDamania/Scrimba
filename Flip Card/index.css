@@ -1,0 +1,92 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #040a22;
+    height: 100%;
+}
+
+.card {
+    background: url(bg.jpg);
+    width: 85vw;
+    height: 85vh;
+    max-height: 500px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 1px 1px 43px black;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    
+}
+
+.play:focus{
+    outline: none;
+}
+
+.play {
+    background: #1cfca4;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 1px 1px 10px black;
+    border: none;
+}
+
+.flip{
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+#video{
+    display: none;
+}
+
+.front {
+    /* display: none; */
+}
+.back {
+    display: none;
+    transform: rotateY(180deg);
+}
+
+h1{
+    color: white;
+}
+/*
+DESCRIPTION:
+
+You challenge is to create a responsive flip card. 
+The user should be able to hover or click on the card 
+and it needs to flip on the other side to reveal what's on the back. 
+
+Remember: the card needs to be responsive - as I change the size of my window, 
+the card needs to adjust to the new size and look natural. 
+
+transform-style, transform, transition, 
+perspective, pseudo-classes, cursor, 
+min- max- prefixes, ems and rems, 
+*/
+
+/* Write your code here 👇 */
+
+
+/*
+
+DETAILED INSTRUCTIONS
+1. Choose the required pseudo-class
+2. Figure out how to flip a card on the required event
+3. Make it responsive!
+
+*/
