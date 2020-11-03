@@ -1,0 +1,55 @@
+html, body {
+    /* margin:20px; */
+    padding: 0;
+    font-family: Karla;
+    height: 100%;
+    /* background: #ffeead; */
+      background: #a8ff78; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a8ff78, #78ffd6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a8ff78, #78ffd6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#box {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background: #ECF2FF;
+    font-size: 30px;
+}
+
+#emoji-container {
+    font-size: 50px;
+}
+
+#box:focus {
+    background: #CFDFFF;
+}
+
+#help-text {
+    display: none;
+    text-align: center;
+}
+
+#box:focus #help-text {
+    display: block;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0%;
+    }
+    to {
+       opacity: 100%; 
+    }
+}
+
+.emoji {
+    animation-name: appear;
+    animation-duration: 1s;
+    font-size: 100px;
+}
