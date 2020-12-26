@@ -1,0 +1,112 @@
+/*
+DESCRIPTION:
+Your job is to style the the individual items so that they look like content cards,
+just like what we have in the slides. Each item has a title and a description.
+
+You should use CSS grid for the layout:
+
+- On mobile phones, one column per row
+- On tablet, two columns per row
+- On desktop, three columns per row
+
+Use media queries to make the page responsive.
+For the page width:
+
+- From 0 to 480px should be for mobile
+- Between 480px and 1025px should be for tablets
+- Above 1025px should be for desktop
+
+Feel free to choose your own colors and you can even go ahead to make your cards
+look completely different. Just follow the layout!
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;800&display=swap');
+
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* background: #000; */
+    background: #9796f0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.image {
+    width: 100%;
+    /* height: auto; */
+    border-radius: 7px 7px 0px 0px;
+    
+}
+
+.img-container {
+    border-radius: 7px 7px 0px 0px;
+    background: url("blur.png") no-repeat;
+    background-size: cover;
+    padding-bottom: 80%;    
+    width: 100%;
+    height: 0;
+}
+
+.item:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.item {
+    background: #f6f6f6;
+    border-radius: 7px;
+    margin: 15px;
+    padding-bottom: 1px;
+    position: relative;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);	
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+}
+
+.item:before {
+	content: "";
+	position: absolute;
+	background: inherit;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-shadow: inset 0 0 2000px rgba(255, 255, 255, .75);
+	filter: blur(10px);
+	margin: -20px;
+}
+
+
+.title, .description{
+    padding-left: 12px;
+    padding-right: 10px;    
+}
+
+.heading {
+    text-align: center;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* grid-column-gap: 15px; */
+    /* grid-row-gap: 15px; */
+}
+
+@media screen and (max-width: 480px) {
+    .row {
+        display: block;
+    }    
+}
+
+@media screen and (min-width: 480px) and (max-width: 1025px) {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* grid-column-gap: 15px; */
+        /* grid-row-gap: 15px; */
+    }
+}
